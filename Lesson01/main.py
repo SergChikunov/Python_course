@@ -1,5 +1,6 @@
-a = 5
-b = 5.89
-c = "hello"
+print('Bведите число и нажмите Enter...')
+numA = input()
+print(numA)
 
-print(f"{a} - {b} - {c}")
+numB = input('Введите еще что-нибудь и нажмите Enter... ')
+print(numB)
