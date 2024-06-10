@@ -1,3 +1,5 @@
-n = 5
+a = 5
+b = 5.89
+c = "hello"
 
-print(type(5))
+print(f"{a} - {b} - {c}")
