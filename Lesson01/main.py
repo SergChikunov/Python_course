@@ -1,6 +1,8 @@
-print('Bведите число и нажмите Enter...')
-numA = input()
+print('Bведите первое число и нажмите Enter...')
+numA = int(input())
 print(numA)
 
-numB = input('Введите еще что-нибудь и нажмите Enter... ')
+numB = int(input('Введите второе число и нажмите Enter... '))
 print(numB)
+
+print(numA, ' + ', numB, ' = ', numA + numB)
