@@ -19,7 +19,7 @@ Input: 6 -> -20 30 -40 50 10 -10
 Output: 2
 """
 
-numbers = "-20 30 -40 50 10 -10".split()#разбитие строки пробелами
+numbers = "-20 30 -40 50 10 -10".split()  # разбитие строки пробелами
 length = 0
 maxlenght = 0
 for elem in numbers:
