@@ -1,0 +1,15 @@
+"""
+Рекурсия. Вывод последовательности Фибоначчи
+"""
+
+
+def fib(n):
+    if n in [1, 2]:  # базовый случай
+        return 1
+    return fib(n - 1) + fib(n - 2)  # рекурсивный вызов
+
+
+list_1 = []
+for i in range(1, 10):
+    list_1.append(fib(i))
+print(list_1)
