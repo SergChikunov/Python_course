@@ -27,3 +27,16 @@ for i, elem in enumerate(my_list):  # с помощью enumerate удобно �
             counter += 1  # счетчик counter увеличиваем именно в конце работы if
         k += 1  # как упоминалось выше - это счетчик while
 print(my_list)  # выводим результат
+
+
+
+input_string = "a a a b c a a d c d d"
+words = input_string.split()
+counts = {}
+
+for word in words:
+    if word not in counts:
+        print(word, end=' ')
+    else:
+        print(f"{word}_{counts[word]}", end=' ')
+    counts[word] = counts.get(word, 0) + 1
