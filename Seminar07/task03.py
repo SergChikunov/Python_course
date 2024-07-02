@@ -23,11 +23,10 @@ def same_by(characteristic, objects):
     # то элементы в заданном списке имеют одинаковые характеристики
     # если длина множества =0, значит заданный список был пустым
     # в этом случае по условию, мы также должны вернуть True
-    if len(my_set) == 1 or len(my_set) == 0:
-        return True
+    return True if len(my_set) == 1 or len(my_set) == 0 else False
 
 
-values = [0, 2, 10, 1]
+values = [0, 2, 10, 6]
 if same_by(lambda x: x % 2, values):
     print('same')
 else:
