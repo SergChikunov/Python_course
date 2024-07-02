@@ -17,13 +17,17 @@ print(‘different’)
 
 
 def same_by(characteristic, objects):
-    lst = list(map(characteristic, objects))  # из результата вызова функции lambda формируем список
-    my_set = set(lst)  # уже из списка делаем множество, set - набор элементов без дубликатов
+    my_set = set(map(characteristic, objects))  # из результата вызова функции lambda
+    #  делаем множество, set - набор элементов без дубликатов
     # таким образом, если длина множества =1,
     # то элементы в заданном списке имеют одинаковые характеристики
     # если длина множества =0, значит заданный список был пустым
     # в этом случае по условию, мы также должны вернуть True
     return True if len(my_set) == 1 or len(my_set) == 0 else False
+
+
+def same_by(characteristic, objects):
+    return len(set(map(characteristic, objects))) < 2  # т.к. имеется оператор сравнения, то вернется тип bool
 
 
 values = [0, 2, 10, 6]
