@@ -27,7 +27,7 @@ def same_by(characteristic, objects):
 
 
 def same_by(characteristic, objects):
-    return len(set(map(characteristic, objects))) < 2  # т.к. имеется оператор сравнения, то вернется тип bool
+    return len(set(map(characteristic, objects))) < 2  # т.к. имеется оператор сравнения, то возвращается тип bool
 
 
 values = [0, 2, 10, 6]
