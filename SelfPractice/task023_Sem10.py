@@ -13,13 +13,13 @@ import seaborn as sns
 import matplotlib.pyplot as mpl
 
 penguins = sns.load_dataset("penguins")
-print(penguins.head())
-print(penguins.info())
-sns.scatterplot(data=penguins, x="sex", y="body_mass_g")  # first subtask
+# print(penguins.head())
+# print(penguins.info())
+# sns.scatterplot(data=penguins, x="sex", y="body_mass_g")  # first subtask
 
 # second subtask
 # sns.scatterplot(data=penguins, x="body_mass_g", y="flipper_length_mm", size='bill_length_mm', hue='bill_length_mm',
-#                 sizes=(10, 100))
+#                sizes=(10, 200))
 # sns.scatterplot(data=penguins, x="body_mass_g", y="bill_length_mm", hue='island', style='species')  # second chart
 
 # third subtask
@@ -36,7 +36,14 @@ graph = graph.add_legend(legend_data=body_mass, title='Масса тушки')  
 # forth subtask
 # sns.displot(data=penguins, x='flipper_length_mm', y='body_mass_g', cbar=True)
 
+# data = penguins.pivot_table(index='species', columns='island', values='body_mass_g')
+# sns.heatmap(data)
+# mpl.xlabel('Остров', size=14)
+# mpl.ylabel('Вид пингвина', size=14)
+# mpl.show()
+
 # fifth subtask
-# sns.displot(data=penguins, x='body_mass_g', kind='hist', col='sex', hue='species')
+# sns.displot(data=penguins, x='body_mass_g', kind='hist')
+penguins['body_mass_g'].hist(bins=10)
 
 mpl.show()

@@ -21,6 +21,7 @@ df = pd.read_csv('california_housing_train.csv')
 # 4 subtask
 # Значения в housing_median_age от 1 до 52 с шагом 1, это чересчур много для отображения в легенде
 # Создадим отдельный список для legend_mark с шагом кратным пяти
+
 my_list_marks = []
 for i in range(1, 60, 4):
     my_list_marks.append(i)
@@ -28,4 +29,6 @@ for i in range(1, 60, 4):
 my_plot = sns.histplot(data=df, x="median_house_value", hue='housing_median_age')  # 4 subtask
 # определяем название легенды, размещение, прикручиваем тень к ней, проставляем метки данных
 mpl.legend(title="housing_median_age", loc='best', bbox_to_anchor=(1, 1), shadow=True, labels=my_list_marks)
+
 mpl.show()
+
